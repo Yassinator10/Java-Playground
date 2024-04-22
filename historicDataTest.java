@@ -71,4 +71,9 @@ public class historicDataTest extends DefaultEWrapper {
    public void historicalDataEnd(int reqId, String startDateStr, String endDateStr) {
        System.out.println("HistoricalDataEnd. " + EWrapperMsgGenerator.historicalDataEnd(reqId, startDateStr, endDateStr));
    }
+
+   @Override
+    public void historicalDataUpdate(int reqId, Bar bar) {
+        System.out.println("HistoricalDataUpdate. " + EWrapperMsgGenerator.historicalData(reqId, bar.time(), bar.open(), bar.high(), bar.low(), bar.close(), bar.volume(), bar.count(), bar.wap()));
+    }
 }
